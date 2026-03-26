@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    h1 {
+    color: white;
+}
+
+    h3 {
+    color: white;
+}
+    
+    input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+    button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+    button:hover {
+    background-color: #0056b3;
+}
+
+    #demo1, #demo2, #demo3 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e1f71b;
+}
+</style>
+
+</head>
+<body>
+    <h1>SPTecher's Machine</h1>
+    <br>
+    <h3>Digite um número decimal</h3>
+    <input type="text" id="input_n1" placeholder="Ex:42">
+    <br>
+    <br>
+    <button onclick="converter()">Converter</button>
+    <br><br>
+    <h3>Resultados:</h3>
+    <p>Octal:</p>
+    <div id="demo1"></div>
+    <p></p>
+    <p>Hexadecimal:</p>
+    <div id="demo2"></div>
+    <p></p>
+    <p>Binário:</p>
+    <div id="demo3"></div>
+    <p></p>
+</body>
+</html>
+<script>
+    function converter() {
+        let decimal = Number(input_n1.value);
+
+        demo1.innerHTML = decimal.toString(8);
+        demo2.innerHTML = decimal.toString(16);
+        demo3.innerHTML = decimal.toString(2);
+    }
+</script>
